@@ -9,12 +9,13 @@ export class AppComponent {
   title = 'bytebank';
   // destino: number;
   // valor: number;
-  transferencia: any = {};
+  transferencias: any[] = [];
 
   transferirArquivo($event) {
     console.log($event);
     // this.destino = $event.destino;
     // this.valor = $event.valor;
-    this.transferencia = $event;
+    const transferenciaComData = {...$event, data: new Date()}
+    this.transferencias.push(transferenciaComData);
   }
 }
