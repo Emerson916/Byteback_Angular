@@ -1,7 +1,10 @@
-<nova-transferencia
-  (aoTransferir)="transferirArquivo($event)"
-></nova-transferencia>
+<header>
+  <a routerLink="extrato"> Bytebank</a>
+  <a routerLink="nova-transferencia" routerLinkActive="ativo"> Nova Transferência </a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
 
-<app-extrato [transferencias]="transferencias"></app-extrato>
-<!-- <p>Valor: {{ valor }}</p>
-<p>Destino: {{ destino }}</p> -->
+<!-- Rodar esse comando para subir o mock json de dados -->
+<!-- json-server --watch db.json -->
